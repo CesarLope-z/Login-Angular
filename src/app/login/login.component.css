@@ -21,3 +21,22 @@ input{
     min-width: 100px;
 
 }
+.success{
+    border: 2px solid greenyellow;
+    border-radius: 1rem;
+    color: greenyellow;
+    margin: auto;
+    padding: 7px 20px;
+}
+.input.ng-touched.ng-invalid{
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+}
+.input.ng-touched.ng-valid{
+    border-bottom: 2px solid greenyellow;
+    border-left: 2px solid greenyellow;
+}
+input:disabled{
+    border: 2px solid gray;
+    color: gray;
+}

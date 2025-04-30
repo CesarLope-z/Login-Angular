@@ -13,6 +13,12 @@
         <div>
             <input [disabled]="!activeForm.valid" class="input-sub" type="submit" value="Submit">
         </div>
+        @if(IsLogged){
+            <div class="success">
+                <p>Log In Success</p>
+                
+            </div>
+        }
     </form>
 </div>
 <app-footer></app-footer>

@@ -13,17 +13,18 @@ import { routes } from '../app.routes';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  IsLogged = false;
 
   activeForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', Validators.minLength(8))
+    password: new FormControl('',[Validators.required, Validators.minLength(8)])
   });
 
   submitLogin(){
-
-    alert(`
-      ${this.activeForm.value.email} accedió
-      `)
+    this.IsLogged = true;
+    // alert(`
+    //   ${this.activeForm.value.email} accedió
+    //   `)
     this.activeForm.reset();
   }
 
