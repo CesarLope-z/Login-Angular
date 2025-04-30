@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+:root{
+    color-scheme: light dark;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: #000000;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 10%, rgba(153, 43, 204, 1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+a{
+    max-width: 50%;
+    font-size:xx-large;
+    font-weight: bold;
+    border: 3px solid white;
+    padding: 0.7rem 4rem !important;
+    margin: 1rem 0 !important;
+}
+a:hover{
+    border: 4px solid yellow;
+    /* box-shadow: inset; */
+}
+.enlace{
+    margin: 2rem 0;
+}
+footer{
+    position: absolute;
+    top: 95%;
+    width: 100%;
+}

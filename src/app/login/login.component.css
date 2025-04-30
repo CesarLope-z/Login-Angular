@@ -1,0 +1,23 @@
+.login{
+    display: grid;
+    text-align: center;
+    margin: 10% 0;
+}
+input{
+    margin: 15px 0;
+    padding: 8px 10px;
+}
+
+.input{
+    border: 2px solid white;
+    border-radius: 1rem;
+    min-width: 120px;
+    max-width: 300px;
+    /* width: 50%; */
+}
+.input-sub{
+    border: 2px solid white;
+    border-radius: 1rem;
+    min-width: 100px;
+
+}
