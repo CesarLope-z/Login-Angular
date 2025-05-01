@@ -1,0 +1,25 @@
+<app-header [margin]="false" ></app-header>
+
+<div>
+    <form class="w-fit m-auto" [formGroup]="activeForm2" (submit)="submitLogin2()">
+        <div class="grid w-auto">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" class="input" type="text" formControlName="name">
+        </div>
+        <div class="grid w-auto">
+            <label class="label" for="edad">Edad:</label>
+            <input id="edad" class="input" type="text" formControlName="edad">
+        </div>
+        <div class="grid w-auto">
+            <label class="label" for="email">Email:</label>
+            <input id="email" class="input" type="text" formControlName="email">
+        </div> 
+        <div class="grid w-auto">
+            <label class="label" for="password">Password:</label>
+            <input id="password" class="input" type="text" formControlName="password">
+        </div>
+        <input type="submit" class="input-sub" value="Register" [disabled]="!activeForm2.valid">
+    </form>
+</div>
+
+<app-footer></app-footer>
