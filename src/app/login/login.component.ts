@@ -3,12 +3,14 @@ import { FooterComponent } from '../share/footer/footer.component';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule, FormGroup, Validators } from '@angular/forms';
-import { routes } from '../app.routes';
+import { MatMenuModule } from '@angular/material/menu'
+import { MatButtonModule } from '@angular/material/button';
+import { MenusComponent } from '../share/menus/menus.component';
 
 
 @Component({
   selector: 'app-login',
-  imports: [FooterComponent, RouterLink, CommonModule,  ReactiveFormsModule],
+  imports: [FooterComponent, MenusComponent, CommonModule,  ReactiveFormsModule, MatMenuModule, MatButtonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

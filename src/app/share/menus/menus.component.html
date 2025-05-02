@@ -1,0 +1,17 @@
+<div class="m-4 flex justify-between">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>home</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item class="border-none " routerLink="/">Home</button >
+        <button mat-menu-item class="border-none " routerLink="/login">Log In</button >
+        <button mat-menu-item class="border-none " routerLink="/signin">Sign In</button >
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="menuOff">
+        <mat-icon>login</mat-icon>
+    </button>
+    <mat-menu #menuOff="matMenu">
+        <button mat-menu-item>Sign Out</button>
+    </mat-menu>
+</div>

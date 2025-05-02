@@ -2,10 +2,15 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../share/header/header.component';
 import { FooterComponent } from '../share/footer/footer.component';
 import { FormGroup, ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
+import { MatMenuModule, MatMenu } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { MenusComponent } from '../share/menus/menus.component';
 
 @Component({
   selector: 'app-register',
-  imports: [HeaderComponent, FooterComponent, ReactiveFormsModule],
+  imports: [HeaderComponent, MenusComponent, FooterComponent, ReactiveFormsModule, MatMenuModule, MatButtonModule, MatIconModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
