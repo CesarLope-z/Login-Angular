@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MenusComponent } from '../share/menus/menus.component';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -24,9 +25,32 @@ export class RegisterComponent {
     password: new FormControl('', [Validators.required, Validators.minLength(8) ])
   })
 
+  constructor(private userService: UserService) {}
+
   submitLogin2(){
-    this.isRegister = true
-    console.log(this.activeForm2.value)
+    if (this.activeForm2.valid) {
+      const formValue = this.activeForm2.value;
+      const userData = {
+        name: formValue.name as string,
+        edad: Number(formValue.edad),
+        email: formValue.email as string,
+        password: formValue.password as string,
+        credential: Date.now()
+      };
+      console.log(userData);
+
+      this.userService.registerUser(userData).subscribe({
+        next: (res) => {
+          console.log('Usuario registrado con éxito:', res);
+          this.isRegister = true;
+          this.activeForm2.reset();
+          // Aquí podrías redireccionar o mostrar un mensaje
+        },
+        error: (err) => {
+          console.error('Error al registrar usuario:', err);
+        }
+      });
+    }
     
   }
 
