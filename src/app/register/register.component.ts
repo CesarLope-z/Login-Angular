@@ -11,7 +11,7 @@ import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',
-  imports: [HeaderComponent, MenusComponent, FooterComponent, ReactiveFormsModule, MatMenuModule, MatButtonModule, MatIconModule],
+  imports: [HeaderComponent, FooterComponent, ReactiveFormsModule, MatMenuModule, MatButtonModule, MatIconModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
